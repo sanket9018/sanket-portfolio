@@ -1,0 +1,186 @@
+.feedback_chat {
+    position: fixed;
+    /* Fixed positioning */
+    bottom: 20px;
+    /* Adjust this value to control the distance from the bottom */
+    right: 20px;
+    /* Adjust this value to control the distance from the right */
+
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 5px;
+
+    /* Make it circular if needed */
+    cursor: pointer;
+    /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Chat icon */
+
+
+/* Popup styles */
+.feedback_popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(50, 50, 53);
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 10px rgba(205, 204, 204, 0.699); */
+    padding: 40px;
+    z-index: 999;
+    /* Ensure it appears above other content */
+}
+
+.close_popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.feedback_form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feedback_form input[type="email"],
+.feedback_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    border-radius: 3px;
+}
+
+.feedback_form button {
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 14px;
+    /* border: none; */
+    cursor: pointer;
+    transition: 0.3s all;
+    border-radius: .5rem;
+    background-color: rgba(50, 50, 53, 0.442);
+    /* background-color: #007BFF; */
+    /* border-bottom: 2px solid #007bff00; */
+    border: 2px solid transparent;
+    border-bottom: 2px solid #007BFF;
+}
+
+.feedback_form button:hover {
+    /* background-color: #007bff00; */
+    border: 2px solid #fff;
+
+}
+
+/* Optional: Add styles for the icon */
+.fa-comments {
+    font-size: 24px;
+}
+
+.user_feedback {
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    max-width: 800px;
+    /* Adjust the maximum width for responsiveness */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    /* Textarea background color */
+    color: #fff;
+    /* Textarea text color */
+    resize: vertical;
+    border: 0.5px solid white;
+    /* Allow vertical resizing on textarea */
+}
+
+/* Style input field */
+input[type="text"] {
+    border: 0.5px solid white;
+    width: 100%;
+    /* Take up full width on small screens */
+    max-width: 400px;
+    /* Limit width on larger screens */
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #333;
+    /* Input background color */
+    color: #fff;
+    /* Input text color */
+}
+
+
+/* spinner */
+
+/* Custom loading indicator styles */
+.custom-loading-indicator {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    z-index: 9999;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* loader */
+.loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #007BFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
