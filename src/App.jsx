@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
-import "../src/static/css/home.css";
-import "../src/static/css/nav.css";
+import "/css/home.css";
+import "/css/nav.css";
 
 const Portfolio = ({ myQuote, myAuth }) => {
   const [showAllSkills, setShowAllSkills] = useState(false);
@@ -89,15 +89,14 @@ const Portfolio = ({ myQuote, myAuth }) => {
             <h2><span className="auto-input"> </span></h2>
             <div className="about-content">
               I'm a skilled Python Developer passionate about building scalable web applications and automation tools. I specialize in FastAPI, Django, and data-driven solutions using tools like Apache Airflow, Selenium, and Pandas. Focused on performance optimization, microservices architecture, and real-time analytics, I enjoy solving complex problems with clean, efficient code and a constant drive to learn and innovate.
-
             </div>
             {/* <div className="about-content">
               I was learning about <strong><em><u><a target="_blank" rel="noreferrer" style={{ color: "#be3144" }} href="https://en.wikipedia.org/wiki/Web_development">web development</a></u></em></strong> in my Bachelor of Computer Science and I'm also able to develop and improve my programming skills and apply them into a variety of projects.
             </div> */}
           </div>
           <div className="welcomeimg">
-            <img className="myimg" src="src/static/img/s.jpg" alt="" />
-            <a href="/src/static/files/python_developer_sanket_resume.pdf" download className="download-btn">Resume</a>
+            <img className="myimg" src="/img/s.jpg" alt="" />
+            <a href="/files/python_developer_sanket_resume.pdf" download className="download-btn">Resume</a>
           </div>
         </section>
 
@@ -105,7 +104,7 @@ const Portfolio = ({ myQuote, myAuth }) => {
           <div className="skills-grid">
             {visibleSkills.map(({ src, label }) => (
               <div className="skill-card" key={label}>
-                <img src={`src/static/img/skills/${src}`} alt={label} />
+                <img src={`/img/skills/${src}`} alt={label} />
                 <p>{label}</p>
               </div>
             ))}
@@ -135,7 +134,7 @@ const Portfolio = ({ myQuote, myAuth }) => {
         </section>
 
         <button id="goToTopBtn" title="Go to top" style={{ display: "none" }}>
-          <img src="src/static/img/top.svg" alt="Top" />
+          <img src="/img/top.svg" alt="Top" />
         </button>
 
         <footer>
