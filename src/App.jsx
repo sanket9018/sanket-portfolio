@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
-import "/css/home.css";
-import "/css/nav.css";
+import "/src/assets/css/home.css";
+import "/src/assets/css/nav.css";
 
 const Portfolio = ({ myQuote, myAuth }) => {
   const [showAllSkills, setShowAllSkills] = useState(false);
