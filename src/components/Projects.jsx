@@ -4,22 +4,34 @@ import '/src/assets/css/projects.css';
 const Projects = () => {
     const projects = [
         {
-            title: "E-Commerce Platform",
-            image: "/img/projects/ecommerce.jpg",
-            description: "A full-stack e-commerce platform with features like user authentication, product catalog, shopping cart, and secure payment integration. Implemented real-time inventory management and order tracking system.",
-            techStack: ["Python", "Django", "React", "PostgreSQL", "AWS", "Docker", "Redis"]
+            title: "TrackIT - Quick Commerce Price Tracker",
+            image: "/img/projects/trackit.jpg",
+            description: "A sophisticated web scraping system that tracks real-time product details from multiple quick commerce platforms (Zepto, Blinkit, Instamart). Features include automated execution via Apache Airflow, IP rotation for reliable scraping, S3 integration for data storage, and a custom admin panel with real-time analytics dashboard. The system uses microservices architecture with RabbitMQ for real-time updates.",
+            techStack: ["Python", "FastAPI", "SQLAlchemy", "Pandas", "Selenium", "AWS (S3, EC2, RDS)", "Airflow", "RabbitMQ", "Celery", "Redis", "Tailwind CSS", "JavaScript"]
         },
         {
-            title: "Task Management System",
-            image: "/img/projects/taskmanager.jpg",
-            description: "A collaborative task management system with real-time updates, task assignment, progress tracking, and team collaboration features. Includes dashboard analytics and reporting capabilities.",
-            techStack: ["FastAPI", "React", "MongoDB", "Docker", "WebSocket", "JWT"]
+            title: "OneHeartMarket - Professional Network Platform",
+            image: "/img/projects/oneheart.jpg",
+            description: "A professional networking platform similar to LinkedIn but focused on non-tech professionals. Features include user and business profiles, job posting and applications, CV creation, social features (following, posts, likes, comments), real-time chat with WebSocket, role-based access control, and payment integration. Includes comprehensive API testing and containerization.",
+            techStack: ["Django REST Framework", "MySQL", "MongoDB", "Pytest", "React", "Docker", "Firebase", "Stripe", "WebSocket", "JWT", "Swagger"]
         },
         {
-            title: "Data Automation Pipeline",
-            image: "/img/projects/automation.jpg",
-            description: "Automated data processing pipeline that extracts, transforms, and loads data from multiple sources. Features include scheduled jobs, error handling, and data validation.",
-            techStack: ["Python", "Apache Airflow", "Pandas", "MySQL", "Docker", "AWS S3"]
+            title: "Billing System - Invoice Management Platform",
+            image: "/img/projects/billing.jpg",
+            description: "A comprehensive invoice management system with strong authentication including two-step verification via Google Authenticator. Features include CRUD operations for customers, sellers, categories, and products, automated PDF invoice generation with QR codes, Dropbox integration for document storage, and direct email delivery of invoices. Includes Stripe payment gateway integration for wallet and transaction management.",
+            techStack: ["Django", "Django REST Framework", "PostgreSQL", "Swagger", "Dropbox API", "Twilio", "Stripe", "JIRA", "Google Authenticator"]
+        },
+        {
+            title: "Diamond Business Showcase Website",
+            image: "/img/projects/diamond.jpg",
+            description: "A professional showcase website for a diamond business owner featuring 8 informative pages including home, about, services, portfolio, and contact pages. Includes a streamlined admin panel for content management, allowing easy updates to product showcases, business information, and contact details. The website is optimized for performance and SEO, with responsive design for all devices.",
+            techStack: ["Python", "Django", "Django REST Framework", "HTML5", "CSS3", "JavaScript", "Hostinger"]
+        },
+        {
+            title: "Domestic Billing Desktop Application",
+            image: "/img/projects/desktop.jpg",
+            description: "A desktop application built with Tkinter for managing and generating bills for domestic clients. Features include a user-friendly GUI for data entry, automated PDF bill generation using ReportLab, data storage in local Excel files, and data analysis capabilities. The application provides a simple interface for small businesses to manage their billing and client information efficiently.",
+            techStack: ["Python", "Tkinter", "ReportLab", "Pandas", "NumPy", "Excel Integration", "PDF Generation"]
         }
     ];
 
