@@ -30,6 +30,13 @@ const Portfolio = ({ myQuote, myAuth }) => {
     return () => window.removeEventListener("scroll", scrollFunction);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   const toggleSkills = () => {
     setShowAllSkills(!showAllSkills);
   };
@@ -140,7 +147,7 @@ const Portfolio = ({ myQuote, myAuth }) => {
           </div>
         </section>
 
-        <button id="goToTopBtn" title="Go to top" style={{ display: "none" }}>
+        <button id="goToTopBtn" title="Go to top" onClick={scrollToTop} style={{ display: "none" }}>
           <img src="/img/top.svg" alt="Top" />
         </button>
 
