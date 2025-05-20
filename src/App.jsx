@@ -37,6 +37,14 @@ const Portfolio = ({ myQuote, myAuth }) => {
     });
   };
 
+  const smoothScroll = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+    toggleMenu(); // Close the menu after clicking
+  };
+
   const toggleSkills = () => {
     setShowAllSkills(!showAllSkills);
   };
@@ -87,10 +95,10 @@ const Portfolio = ({ myQuote, myAuth }) => {
           <span className="bar"></span>
         </div>
         <ul id="myUl">
-          <li><a href="#welcome-section" onClick={toggleMenu}>about</a></li>
-          <li><a href="#skills" onClick={toggleMenu}>skills</a></li>
-          <li><a href="#projects" onClick={toggleMenu}>work</a></li>
-          <li><a href="#contact" onClick={toggleMenu}>contact</a></li>
+          <li><a href="#welcome-section" onClick={smoothScroll}>about</a></li>
+          <li><a href="#skills" onClick={smoothScroll}>skills</a></li>
+          <li><a href="#projects" onClick={smoothScroll}>work</a></li>
+          <li><a href="#contact" onClick={smoothScroll}>contact</a></li>
         </ul>
       </div>
 
