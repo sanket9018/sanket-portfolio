@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
+import Projects from "./components/Projects";
 import "/src/assets/css/home.css";
 import "/src/assets/css/nav.css";
 
@@ -33,6 +34,16 @@ const Portfolio = ({ myQuote, myAuth }) => {
     setShowAllSkills(!showAllSkills);
   };
 
+  const toggleMenu = () => {
+    const nav = document.getElementById("navbar");
+    const ul = document.getElementById("myUl");
+    const hambar = document.querySelector(".hambar");
+
+    nav.classList.toggle("navback");
+    ul.classList.toggle("show");
+    hambar.classList.toggle("active");
+  };
+
   const skillList = [
     { src: "python.svg", label: "Python" },
     { src: "django.svg", label: "Django" },
@@ -63,22 +74,16 @@ const Portfolio = ({ myQuote, myAuth }) => {
   return (
     <div className="main">
       <div id="navbar">
-        <div className="hambar" id="myBar" onClick={() => {
-          const nav = document.getElementById("navbar");
-          const ul = document.getElementById("myUl");
-          nav.classList.toggle("navback");
-          ul.classList.toggle("show");
-          ul.style.display = ul.style.display === "flex" ? "none" : "flex";
-        }}>
+        <div className="hambar" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
         <ul id="myUl">
-          <li><a href="#welcome-section">about</a></li>
-          <li><a href="#skills">skills</a></li>
-          <li><a href="#projects">work</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#welcome-section" onClick={toggleMenu}>about</a></li>
+          <li><a href="#skills" onClick={toggleMenu}>skills</a></li>
+          <li><a href="#projects" onClick={toggleMenu}>work</a></li>
+          <li><a href="#contact" onClick={toggleMenu}>contact</a></li>
         </ul>
       </div>
 
@@ -114,6 +119,8 @@ const Portfolio = ({ myQuote, myAuth }) => {
           </button>
         </section>
 
+        <Projects />
+
         <section id="contact">
           <div className="contact-header">
             <h1>Contact Me <i className="fa-solid fa-handshake"></i></h1>
@@ -128,7 +135,7 @@ const Portfolio = ({ myQuote, myAuth }) => {
           </div>
           <div className="quoteSection">
             <span className="quote">
-              {myQuote ? `${myQuote}\n- ${myAuth}` : `“Do what you can, with what you have, where you are.”\n- Theodore Roosevelt.`}
+              {myQuote ? `${myQuote}\n- ${myAuth}` : `"Do what you can, with what you have, where you are."\n- Theodore Roosevelt.`}
             </span>
           </div>
         </section>

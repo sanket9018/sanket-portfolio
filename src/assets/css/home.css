@@ -50,22 +50,6 @@ html {
     color: white;
 }
 
-.bar2 .bar:nth-child(3) {
-    opacity: 0;
-}
-
-.bar2 .bar:nth-child(1) {
-    transform: rotate(45deg);
-    margin-top: 11px;
-    background-color: #151515;
-}
-
-.bar2 .bar:nth-child(2) {
-    transform: rotate(-45deg);
-    margin-top: -7px;
-    background-color: #151515;
-}
-
 .show {
     transition: ease-out 1.5s all;
 }
